@@ -5,14 +5,916 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="style.css" />
     <title>Using Bootstrap</title>
   </head>
   <body>
-    <h1>Hello There</h1>
+    <header class="main-header container">
+      <div class="hero">
+        <div>
+          <time datetime="2020-02-17">Mon, Feb 17, 2020</time>
+        </div>
+        <div>
+          <svg
+            class="logo"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 395.6 60"
+            xml:space="preserve"
+          >
+            <g>
+              <path
+                d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7"
+              ></path>
+            </g>
+          </svg>
+        </div>
+        <div class="auth">
+          <a href="#">SIGN IN</a>
+          <a href="#">
+            SUBSCRIBE
+          </a>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#">U.S</a></li>
+          <li><a href="#">World</a></li>
+          <li><a href="#">Business</a></li>
+          <li><a href="#">Tech & Science</a></li>
+          <li><a href="#">Culture</a></li>
+          <li><a href="#">Newsgeek</a></li>
+          <li><a href="#">Sports</a></li>
+          <li><a href="#">Health</a></li>
+          <li><a href="#">The Debate</a></li>
+          <li><a href="#">Vantage</a></li>
+          <li><a href="#">Weather</a></li>
+        </ul>
+        <input id="search-input" type="text" placeholder="Search" />
+        <label for="search-input" class="i-search"></label>
+      </nav>
+    </header>
+    <main class="container">
+      <div class="left-side">
+        <section class="featured-section">
+          <h2>FEATURED STORIES</h2>
+          <article>
+            <figure>
+              <a href="#">
+                <img
+                  src="https://d.newsweek.com/en/full/1567564/amy-klobuchar.jpg?w=397&h=265&q=90&f=6af0da94fdc2bcd272dde87528e2da02"
+                  alt="Amy Klobuchar"
+                />
+              </a>
+              <div class="category">
+                <a href="#">U.S</a>
+              </div>
+            </figure>
+            <header>
+              <h2>
+                <a href="#">
+                  Amy Klobuchar Says She'd Support Bloomberg and He 'Should Be'
+                  in Debates
+                </a>
+              </h2>
+              <p>
+                "I still do not think he is the best candidate for our country,"
+                the Democratic presidential candidate noted.
+              </p>
+            </header>
+          </article>
+          <article>
+            <figure>
+              <a href="#">
+                <img
+                  src="https://d.newsweek.com/en/full/1567526/nancy-pelosi.jpg?w=397&h=265&q=90&f=6fe439cb7f8afeff049d455edbee6fac"
+                  alt="Nancy Pelosi"
+                />
+              </a>
+              <div class="category">
+                <a href="#">U.S</a>
+              </div>
+            </figure>
+            <header>
+              <h2>
+                <a href="#">
+                  Trump Wasn't Acquitted Because There Was No Proper Trial, Says
+                  Pelosi
+                </a>
+              </h2>
+              <p>
+                "You can't have an acquittal unless you have a trial and you
+                can't have a trial without witnesses and documents," House
+                Speaker Nancy Pelosi told CNN's Christiane Amanpour.
+              </p>
+            </header>
+          </article>
+          <article>
+            <figure>
+              <a href="#">
+                <img
+                  src="https://d.newsweek.com/en/full/1567490/vermont-republican-governor-phil-scott.jpg?w=397&h=265&q=90&f=bfc84075cc3d48853aca842a4b8f5ab2"
+                  alt="governor"
+                />
+              </a>
+              <div class="category">
+                <a href="#">POLITICS</a>
+              </div>
+            </figure>
+            <header>
+              <h2>
+                <a href="#">
+                  GOP Vermont Governor Rebukes Trump, Endorses Primary
+                  Challenger Bill Weld
+                </a>
+              </h2>
+              <p>
+                In a rare Republican rebuke of President Donald Trump, Vermont
+                Governor Phil Scott endorsed challenger Bill Weld in the
+                upcoming March 3 state primary.
+              </p>
+            </header>
+          </article>
+          <article>
+            <figure>
+              <a href="#">
+                <img
+                  src="https://d.newsweek.com/en/full/1567299/mother.jpg?w=397&h=265&l=0&t=0&q=90&f=cd06d7519c23cf8acdc2d5f0d9ee3732"
+                  alt="mother?"
+                />
+              </a>
+              <div class="category">
+                <a href="#">U.S</a>
+              </div>
+            </figure>
+            <header>
+              <h2>
+                <a href="#">
+                  Rape Survivor's U-Visa Bid Rejected Due to New Policy on
+                  'Incomplete' Forms: Report
+                </a>
+              </h2>
+              <p>
+                An apparent new policy shift allows the government to reject
+                applications that are not properly filled out.
+              </p>
+            </header>
+          </article>
+        </section>
+        <section class="sponsored-section">
+          <article>
+            <figure>
+              <a href="#">
+                <img
+                  src="https://d.newsweek.com/en/full/1559216/tokyo-my-city-chizu-nakamoto.jpg?w=343&h=229&f=9001796ad87af5440a19c713ba2fc017"
+                  alt="Tokyo city"
+                />
+              </a>
+              <div class="category sponsored">
+                <a href="#">SPONSORED INSIGHT</a>
+              </div>
+            </figure>
+            <header>
+              <h2>
+                <a href="#">
+                  Female Entrepreneur Active in Tokyo and Uganda
+                </a>
+              </h2>
+              <p>
+                APT Women aims to foster and educate fledgling global business
+                leaders like Chizu Nakamoto.
+              </p>
+            </header>
+          </article>
+          <article>
+            <figure>
+              <a href="#">
+                <img
+                  src="https://d.newsweek.com/en/full/1551968/university-texas-el-paso.jpg?w=343&h=229&f=27929f494a86f92777e982d66aa045fe"
+                  alt="Nurses"
+                />
+              </a>
+              <div class="category sponsored">
+                <a href="#">SPONSORED INSIGHT</a>
+              </div>
+            </figure>
+            <header>
+              <h2>
+                <a href="#">
+                  Nurses - The Real Medical Heroes of 2020
+                </a>
+              </h2>
+              <p>
+                We’re used to doctors bustling in and out when in hospital, but
+                it’s the reassuring presence and professionalism of the nursing
+                staff that we rely on. What sets the best ones apart?
+              </p>
+            </header>
+          </article>
+          <article>
+            <figure>
+              <a href="#">
+                <img
+                  src="https://d.newsweek.com/en/full/1563523/meet-adam-lambert-new-york-city.png?w=343&h=229&f=5650ee55eada1c2dbd4be78a28f9d8d0"
+                  alt="Adam Lambert "
+                />
+              </a>
+              <div class="category sponsored">
+                <a href="#">NYC</a>
+              </div>
+            </figure>
+            <header>
+              <h2>
+                <a href="#">
+                  Meet Adam Lambert in New York City!
+                </a>
+              </h2>
+              <p>
+                Enter the sweepstake for your chance to meet music sensation
+                Adam Lambert and attend the live taping of his appearance on
+                Newsweek Conversations.
+              </p>
+            </header>
+          </article>
+        </section>
+      </div>
+      <div class="middle">
+        <section class="top-story-section">
+          <h2>TOP STORY</h2>
+          <article>
+            <figure>
+              <img
+                src="https://d.newsweek.com/en/full/1567501/william-barr.jpg?w=591&h=364&f=6697efd36a1ccd3b9e176486037a6514"
+                alt="Attorney General William Barr"
+              />
+              <div class="category">
+                <a href="#">POLITICS</a>
+              </div>
+            </figure>
+            <header>
+              <h2>
+                <a href="#">
+                  Attorney General William Barr's Actions Are 'Remarkably Not
+                  Normal,' Legal Historian Says
+                </a>
+              </h2>
+              <p>
+                Barr's intervention in Roger Stone's case, says Jed Shugerman,
+                was "yet another breach of norms in a pattern with Trump and
+                Barr."
+              </p>
+            </header>
+          </article>
+        </section>
+        <section class="culture&travel-section">
+          <h2>
+            CULTURE & TRAVEL
+          </h2>
+          <article>
+            <figure>
+              <img
+                src="https://d.newsweek.com/en/full/1552293/cul-map-underwater-banner.jpg?w=397&h=265&f=556690dba11324f197a04f43aadde8fa"
+                alt="Underwater Art"
+              />
+            </figure>
+            <header>
+              <h2>
+                <a href="#">
+                  These Underwater Art Exhibits Are Helping to Save Our Oceans
+                </a>
+              </h2>
+              <p>
+                British eco-artist Jason deCaires Taylor creates eerie undersea
+                worlds that blend sculpture and marine life, creating havens for
+                coral to regenerate and new ecosystems to thrive.
+              </p>
+              <div class="mini-category">
+                <a href="#">Travel</a>
+              </div>
+            </header>
+          </article>
+          <article>
+            <figure>
+              <img
+                src="https://d.newsweek.com/en/full/1542818/vineyard-remy-martin.jpg?w=397&h=265&f=d9d3a493c4818bedce1a45fc03bbab38"
+                alt="Robots"
+              />
+            </figure>
+            <header>
+              <h2>
+                <a href="#">
+                  In Cognac, Robots Run the Vines
+                </a>
+              </h2>
+              <p>
+                Vineyard technology is extending from robots to the creation of
+                a new type of disease-resistant grape that may be the solution
+                for the wine region's future production.
+              </p>
+              <div class="mini-category">
+                <a href="#">Vineyards</a>
+              </div>
+            </header>
+          </article>
+          <article>
+            <figure>
+              <img
+                src="https://d.newsweek.com/en/full/1564962/cul-map-undergroundsubways-09-91029419.jpg?w=397&h=265&f=c75ea7fe40bca26ffbb19f21fccf1054"
+                alt="Subway Stations"
+              />
+            </figure>
+            <header>
+              <h2>
+                <a href="#">
+                  Subway Stations That Will Stop You in Your Tracks
+                </a>
+              </h2>
+              <p>
+                From space-age designs to murals, artists and architects have
+                transformed these 10 stunning stations around the world into
+                contemplative and artistic spaces.
+              </p>
+              <div class="mini-category">
+                <a href="#">Architecture</a>
+              </div>
+            </header>
+          </article>
+          <article>
+            <figure>
+              <img
+                src="https://d.newsweek.com/en/full/1556716/twa-hotel.jpg?w=397&h=265&f=7af1ce5444b4a2b638b278b6207aeb3a"
+                alt="Airport Restaurants"
+              />
+            </figure>
+            <header>
+              <h2>
+                <a href="#">
+                  Airport Restaurants Worthy of a Layover
+                </a>
+              </h2>
+              <p>
+                We're living in a golden age of airport dining. Maybe someday
+                travelers in economy class will be so lucky to eat better food
+                on flights. Until that happens, you can have an epicurean feast
+                at the airport before your flight and smugly pass on the chicken
+                or pasta option on board the plane.
+              </p>
+              <div class="mini-category">
+                <a href="#">Travel</a>
+              </div>
+            </header>
+          </article>
+        </section>
+        <section class="more-stories-section">
+          <h2>MORE STORIES</h2>
+          <article>
+            <figure>
+              <img
+                src="https://d.newsweek.com/en/full/1567605/diamond-princess-cruises-coronavirus-covid-19-2019-ncov.jpg?w=135&h=90&f=589c6e11eb67a142048408a1a21d3f42"
+                alt="U.S. Passengers "
+              />
+            </figure>
+            <header>
+              <h2>
+                <a href="#">
+                  U.S. Passengers Evacuated from Cruise Ship Test Positive for
+                  COVID-19
+                </a>
+              </h2>
+              <p>
+                Hundreds of U.S. citizens were removed from the Diamond Princess
+                cruise ship on Sunday.
+              </p>
+            </header>
+          </article>
+          <article>
+            <figure>
+              <img
+                src="https://d.newsweek.com/en/full/1567609/bernie-sanders.jpg?w=135&h=90&f=ff61c995d064bfdee026bdb0bcbcff71"
+                alt="Democratic Socialist"
+              />
+            </figure>
+            <header>
+              <h2>
+                <a href="#">
+                  Nearly Half of Voters Say They Could Not Vote For A
+                  'Democratic Socialist'
+                </a>
+              </h2>
+              <p>
+                In hypothetical one-on-one races, self-described democratic
+                socialist Vermont Sen. Bernie Sanders beat each of his major
+                Democratic rivals.
+              </p>
+            </header>
+          </article>
+          <article>
+            <figure>
+              <img
+                src="https://d.newsweek.com/en/full/1567606/afghanistan-peace-deal-taliban-february-finalized-signed.jpg?w=135&h=90&f=bfeeb24c658158923fda26d068aafab1"
+                alt="Taliban"
+              />
+            </figure>
+            <header>
+              <h2>
+                <a href="#">
+                  Taliban Claims to Have Finalized Peace Deal With the U.S.
+                </a>
+              </h2>
+              <p>
+                Taliban spokesperson Suhail Shaheen said the peace deal would be
+                signed by the end of February.
+              </p>
+            </header>
+          </article>
+          <article>
+            <figure>
+              <img
+                src="https://d.newsweek.com/en/full/1567245/joe-biden-bernie-sanders-2020-polls.jpg?w=135&h=90&f=ba1e469a891666a5ea7715083f780afb"
+                alt="Joe Biden"
+              />
+            </figure>
+            <header>
+              <h2>
+                <a href="#">
+                  Joe Biden Says He'd Be 'Most Progressive President' in U.S.
+                  History
+                </a>
+              </h2>
+              <p>
+                He accused the Vermont senator of having "never gotten anything
+                done" in his lengthy political career.
+              </p>
+            </header>
+          </article>
+          <article>
+            <figure>
+              <img
+                src="https://d.newsweek.com/en/full/1567538/rudy-giuliani-mike-bloomberg.jpg?w=135&h=90&f=e5a1dc1befa1c7c75e0690562ad49b2f"
+                alt="Giuliani Criticizes Bloomberg"
+              />
+            </figure>
+            <header>
+              <h2>
+                <a href="#">
+                  Giuliani Criticizes Bloomberg for Backtracking on
+                  'Stop-and-Frisk'
+                </a>
+              </h2>
+              <p>
+                "What is this stuff that he's condemning stop-and-frisk?"
+                Trump's personal lawyer asked.
+              </p>
+            </header>
+          </article>
+          <article>
+            <figure>
+              <img
+                src="https://d.newsweek.com/en/full/1565088/buttigieg-husband.jpg?w=135&h=90&f=748dd76e9c1a35f1fb665e4d1ef9f8d5"
+                alt="Buttigieg"
+              />
+            </figure>
+            <header>
+              <h2>
+                <a href="#">
+                  Buttigieg Responds to Limbaugh's Controversial 'Gay Guy'
+                  Remark
+                </a>
+              </h2>
+              <p>
+                Buttigieg responded to the conservative talk show host's
+                comments claiming the former mayor can never be president
+                because he has been "kissing his husband" on the debate stages.
+              </p>
+            </header>
+          </article>
+          <article>
+            <figure>
+              <img
+                src="https://d.newsweek.com/en/full/1567582/tom-cotton.jpg?w=135&h=90&f=21657cc1b166adefec2b8228748150e3"
+                alt="Cotton"
+              />
+            </figure>
+            <header>
+              <h2>
+                <a href="#">
+                  Cotton Accuses China of 'Lying' About Coronavirus: It May've
+                  Come From Lab
+                </a>
+              </h2>
+              <p>
+                "The situation is very grave in part because...China was lying
+                from the beginning, and they're still lying today," the Arkansas
+                senator said.
+              </p>
+            </header>
+          </article>
+          <article>
+            <figure>
+              <img
+                src="https://d.newsweek.com/en/full/1567537/alexandria-ocasio-cortez.jpg?w=135&h=90&f=7b4a8740a22e6f26a1f4932af7487b3a"
+                alt="AOC"
+              />
+            </figure>
+            <header>
+              <h2>
+                <a href="#">
+                  AOC Calls For New York Bail Reform To Be Given Time At
+                  Re-election Launch
+                </a>
+              </h2>
+              <p>
+                The New York representative said people needed to "slow down a
+                bit" on criticising changes to bail rules in the state that
+                sparked controversy.
+              </p>
+            </header>
+          </article>
+          <article>
+            <figure>
+              <img
+                src="https://d.newsweek.com/en/full/1565775/ice-agent.jpg?w=135&h=90&f=3ee5dd152d5496c1bb6df7a5c70ecb0f"
+                alt="Orange County"
+              />
+            </figure>
+            <header>
+              <h2>
+                <a href="#">
+                  Orange County Police Will Not Help ICE With Immigration
+                  Arrests
+                </a>
+              </h2>
+              <p>
+                Santa Ana Police Department and Orange County Sheriff's
+                Department told local news it would not support or participate
+                in ICE enforcement of immigration laws.
+              </p>
+            </header>
+          </article>
+          <article>
+            <figure>
+              <img
+                src="https://d.newsweek.com/en/full/1567514/bernie-sanders-nevada-rally.jpg?w=135&h=90&f=bd3fd4d64017b82799ffd3d6c6ce91a6"
+                alt="Bernie Sanders"
+              />
+            </figure>
+            <header>
+              <h2>
+                <a href="#">
+                  Bernie Sanders Beats Donald Trump and Democrats on Character,
+                  Empathy: Poll
+                </a>
+              </h2>
+              <p>
+                The Vermont senator came 14 points ahead of the president when
+                voters were asked if they admired their characters.
+              </p>
+            </header>
+          </article>
+          <article>
+            <figure>
+              <img
+                src="https://d.newsweek.com/en/full/1567567/tony-fernandez.jpg?w=135&h=90&f=5365640064eb1d212a67257b1d9366b7"
+                alt="Baseball"
+              />
+            </figure>
+            <header>
+              <h2>
+                <a href="#">
+                  Baseball Community Remembers the Late All-Star Tony Fernandez
+                </a>
+              </h2>
+              <p>
+                "He influenced my life in a positive way. He made everyone
+                around him better," said former teammate Todd Stottlemyre.
+              </p>
+            </header>
+          </article>
+        </section>
+      </div>
+      <div class="right-side">
+        <section class="opinion-section">
+          <h2>OPINION</h2>
+          <article>
+            <figure>
+              <img
+                src="https://d.newsweek.com/en/full/1515495/donna-rotunno.jpg?w=63&h=63&f=3b5060e1ccad0bd149ca73208415dbc3"
+                alt="DONNA ROTUNNO"
+              />
+            </figure>
+            <header>
+              <h2>
+                <a href="#">
+                  Jurors in My Client Harvey Weinstein's Case Must Look Past the
+                  Headlines
+                </a>
+              </h2>
+              <h3>BY DONNA ROTUNNO</h3>
+            </header>
+          </article>
+          <article>
+            <figure>
+              <img
+                src="https://d.newsweek.com/en/full/1567370/schultz-miller.png?w=63&h=63&f=08cb1e5f21334b146a1536ba512a3e02"
+                alt="DEBBIE WASSERMAN SCHULTZ AND SHEILA KATZ"
+              />
+            </figure>
+            <header>
+              <h2>
+                <a href="#">
+                  Stephen Miller Brought White Supremacy Into Our Immigration
+                  Policy
+                </a>
+              </h2>
+              <h3>BY DEBBIE WASSERMAN SCHULTZ AND SHEILA KATZ</h3>
+            </header>
+          </article>
+          <article>
+            <figure>
+              <img
+                src="https://d.newsweek.com/en/full/1567126/joel-whitney.png?w=63&h=63&f=8666873acf66ed24bd6230dacfcc0259"
+                alt="JOEL WHITNEY"
+              />
+            </figure>
+            <header>
+              <h2>
+                <a href="#">
+                  We Shouldn't Promise to Campaign for a Nominee Other Than
+                  Bernie—Yet
+                </a>
+              </h2>
+              <h3>BY JOEL WHITNEY</h3>
+            </header>
+          </article>
+          <article>
+            <figure>
+              <img
+                src="https://d.newsweek.com/en/full/1567141/rachel-fishman-clare-mccann.png?w=63&h=63&f=15ca5fd63531da14d01e3988956f416b"
+                alt="RACHEL FISHMAN AND CLARE MCCANN"
+              />
+            </figure>
+            <header>
+              <h2>
+                <a href="#">
+                  The Trump Admin Is Wrong. Students Are Not to Blame for
+                  Student Debt
+                </a>
+              </h2>
+              <h3>BY RACHEL FISHMAN AND CLARE MCCANN</h3>
+            </header>
+          </article>
+          <article>
+            <figure>
+              <img
+                src="https://d.newsweek.com/en/full/83499/newt-gingrich.png?w=63&h=63&l=48&t=55&f=d8b4f8dfaad8a5f0f71bffcc6c0d6a77"
+                alt="NEWT GINGRICH"
+              />
+            </figure>
+            <header>
+              <h2>
+                <a href="#">
+                  Bring On Super Tuesday. What Iowa and New Hampshire Mean for
+                  the Race Ahead
+                </a>
+              </h2>
+              <h3>BY NEWT GINGRICH</h3>
+            </header>
+          </article>
+          <article>
+            <figure>
+              <img
+                src="https://d.newsweek.com/en/full/100577/daniel-r-depetris.png?w=63&h=63&f=557e36e1b094f95cf0416216ba9ecaa7"
+                alt="DANIEL R. DEPETRIS"
+              />
+            </figure>
+            <header>
+              <h2>
+                <a href="#">
+                  A U.S.-Taliban Deal Is Progress. But It's Still a Formula for
+                  More War
+                </a>
+              </h2>
+              <h3>BY DANIEL R. DEPETRIS</h3>
+            </header>
+          </article>
+        </section>
+        <section class="latest-news-section">
+          <h2>LATEST NEWS</h2>
+          <article>
+            <figure>
+              <img
+                src="https://d.newsweek.com/en/full/1567349/starbuck-san-franciso-california-2004.jpg?w=397&h=265&f=05f301776e7382cf31b528867b30a1e2"
+                alt="Starbucks"
+              />
+            </figure>
+            <h2>
+              <a href="#">
+                Are Starbucks and Other Coffee Shops Open on Presidents Day?
+              </a>
+            </h2>
+          </article>
+          <article>
+            <figure>
+              <img
+                src="https://d.newsweek.com/en/full/1567601/ted-cruz.jpg?w=397&h=265&l=0&t=0&f=e3280fc0fa67c00d62dfd7f1ca1defc1"
+                alt="Ted Cruz"
+              />
+            </figure>
+            <h2>
+              <a href="#">
+                Ted Cruz Criticizes Alabama Vasectomy Legislation: 'Yikes!'
+              </a>
+            </h2>
+          </article>
+          <article>
+            <figure>
+              <img
+                src="https://d.newsweek.com/en/full/1567367/equinox-gym-berkeley-california-september-2018.jpg?w=397&h=265&f=51184900e83e97a123a23786021972bc"
+                alt="the Gym"
+              />
+            </figure>
+            <h2>
+              <a href="#">
+                Is the Gym Open Today? See Presidents Day Hours at Various
+                Venues
+              </a>
+            </h2>
+          </article>
+          <article>
+            <figure>
+              <img
+                src="https://d.newsweek.com/en/full/1567360/istock-fast-food-open-presidents-day.jpg?w=397&h=265&f=8ffc86e40b8ee3927a5551bdd3df8b1f"
+                alt="Presidents Day"
+              />
+            </figure>
+            <h2>
+              <a href="#">
+                Which Restaurants Are Open on Presidents Day?
+              </a>
+            </h2>
+          </article>
+          <article>
+            <figure>
+              <img
+                src="https://d.newsweek.com/en/full/1567322/groceries.jpg?w=397&h=265&f=4a2c5fceeb5eded5f1338b2973e80946"
+                alt="Grocery Store"
+              />
+            </figure>
+            <h2>
+              <a href="#">
+                Presidents Day Grocery Store Hours: When Publix and Whole Foods
+                Are Open
+              </a>
+            </h2>
+          </article>
+          <article>
+            <figure>
+              <img
+                src="https://d.newsweek.com/en/full/1567296/atm.jpg?w=397&h=265&f=55d09cfb6fbf8016949b86d062cafdda"
+                alt="Banks"
+              />
+            </figure>
+            <h2>
+              <a href="#">
+                Are Banks Open on Presidents Day?
+              </a>
+            </h2>
+          </article>
+          <article>
+            <figure>
+              <img
+                src="https://d.newsweek.com/en/full/1567077/istock-shopping-presidents-day.jpg?w=397&h=265&f=3e8104c7cecde4a85ab6c85d3fb43422"
+                alt="Walmart"
+              />
+            </figure>
+            <h2>
+              <a href="#">
+                Presidents' Day Sales: Deals at Walmart, Best Buy, Macy's and
+                More
+              </a>
+            </h2>
+          </article>
+          <section class="sponsored-section">
+            <article>
+              <figure>
+                <a href="#">
+                  <img
+                    src="https://d.newsweek.com/en/full/1561558/saudi-picture.jpg?w=343&h=229&f=c38d1701b1898e7dcc79c2e2dc3aef4a"
+                    alt="Saudi Arabia"
+                  />
+                </a>
+                <div class="category sponsored">
+                  <a href="#">SPONSORED INSIGHT</a>
+                </div>
+              </figure>
+              <header>
+                <h2>
+                  <a href="#">
+                    Saudi Arabia Accelerates Ahead
+                  </a>
+                </h2>
+                <p>
+                  With interest from international investors up 70 percent in
+                  2019, Saudi Arabia is becoming an investment powerhouse—a
+                  transformation supported by its flourishing financial services
+                  industry and rapidly expanding private sector. Read more.
+                </p>
+              </header>
+            </article>
+            <aside class="sign-up">
+              <i class="icon i-n"></i>
+              <h3>SIGN UP FOR OUR NEWSLETTER</h3>
+              <a href="#">SIGN UP</a>
+              <a href="#">Update your preferences »</a>
+            </aside>
+            <article>
+              <figure>
+                <a href="#">
+                  <img
+                    src="https://d.newsweek.com/en/full/1563365/american-heritage-school.jpg?w=343&h=229&f=2ceb3765a3e6177511f248f3b5ca7112"
+                    alt="Private Education"
+                  />
+                </a>
+                <div class="category sponsored">
+                  <a href="#">SPONSORED INSIGHT</a>
+                </div>
+              </figure>
+              <header>
+                <h2>
+                  <a href="#">
+                    What Can A Private Education Do For Your Child?
+                  </a>
+                </h2>
+                <p>
+                  What is the single most consequential choice you make to give
+                  your child the best possible advantage in life? If you think
+                  it’s education, read on.
+                </p>
+              </header>
+            </article>
+            <article>
+              <figure>
+                <a href="#">
+                  <img
+                    src="https://d.newsweek.com/en/full/1556493/ohio-northern-university-pettit-college-law.jpg?w=343&h=229&f=83cc4a2b96cbd472e102cf04f99fc5be"
+                    alt="Career In Law"
+                  />
+                </a>
+                <div class="category sponsored">
+                  <a href="#">SPONSORED INSIGHT</a>
+                </div>
+              </figure>
+              <header>
+                <h2>
+                  <a href="#">
+                    Have You Thought About A Career In Law? If So, Where Should
+                    You Get Qualified?
+                  </a>
+                </h2>
+                <p>
+                  The rewards for a career in the legal profession are many and
+                  varied, and demand for lawyers is high. So which schools
+                  produce the best lawyers?
+                </p>
+              </header>
+            </article>
+          </section>
+        </section>
+      </div>
+      <section class="magazine-section"></section>
+
+      <section class="editors-pick-section"></section>
+
+      <section class="featured-section"></section>
+
+      <section class="categories-section">
+        <section class="category-section"></section>
+
+        <section class="category-section"></section>
+
+        <section class="category-section"></section>
+
+        <section class="category-section"></section>
+
+        <section class="category-section"></section>
+
+        <section class="category-section"></section>
+      </section>
+
+      <section class="subscribe-section"></section>
+    </main>
+    <footer class="main-footer"></footer>
   </body>
 </html>
