@@ -18,6 +18,8 @@ body {
   display: inline-block;
   width: 1.5rem;
   height: 1.5rem;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .i-search {
@@ -30,6 +32,10 @@ body {
 
 .i-right-arrow {
   background-image: url('https://g.newsweek.com/www/images/icon-arrow-right.svg');
+}
+
+.i-right-arrow-r {
+  background-image: url('images/icon-arrow-right-r.svg');
 }
 
 /* 
@@ -62,6 +68,14 @@ https://g.newsweek.com/themes/newsweek/images/icon-slideshows-nw.png
 }
 
 .auth a:last-child {
+  display: inline-flex;
+  align-items: center;
   color: rgb(247, 34, 16);
   background-color: #fff;
+}
+
+.auth a:last-child .icon {
+  width: 0.5rem;
+  height: 0.875rem;
+  margin-left: 0.625rem;
 }
