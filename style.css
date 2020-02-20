@@ -1,6 +1,7 @@
 /* global */
 
 body {
+  background-color: #f4f5f6;
   font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -45,37 +46,175 @@ https://g.newsweek.com/themes/newsweek/images/icon-slideshows-nw.png
 
 */
 
+/* wrapper */
+.main-header,
+main,
+.main-footer {
+  background-color: #fff;
+}
+
 /* main-header */
 
+.main-header {
+  margin-bottom: 2px;
+}
+
 .hero {
+  min-height: 50px;
   background-color: rgb(247, 34, 16);
   color: #fff;
 }
 
 .hero .logo {
+  margin-left: 1rem;
   display: block;
-  margin: 0 auto;
-  width: 396px;
-  height: 60px;
+  align-self: center;
   fill: #fff;
 }
 
+.hero .logo svg {
+  height: 20px;
+}
+
+@media (min-width: 992px) {
+  .hero {
+    position: relative;
+    padding: 3.3rem 0.6rem 0.95rem 0.6rem;
+  }
+
+  .hero .logo {
+    margin-left: initial;
+    position: absolute;
+    left: 50%;
+    align-self: auto;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    width: 396px;
+    height: 60px;
+  }
+
+  .hero .logo svg {
+    height: auto;
+  }
+}
+
 .auth a {
-  padding: 0.2rem 1rem;
   font-weight: 700;
+  font-size: 0.875rem;
   color: #fff;
   text-decoration: none;
 }
 
-.auth a:last-child {
+.auth a:first-of-type {
+  padding-right: 0.2rem;
+}
+
+.auth a:last-of-type {
   display: inline-flex;
   align-items: center;
+  padding: 0.15rem 0.2rem;
   color: rgb(247, 34, 16);
   background-color: #fff;
 }
 
-.auth a:last-child .icon {
+.auth a:last-of-type .icon {
+  margin-left: 1rem;
   width: 0.5rem;
   height: 0.875rem;
   margin-left: 0.625rem;
+}
+
+.menu-icon {
+  margin: 0.2rem 0.5rem;
+}
+
+.menu-bar {
+  width: 24px;
+  height: 4px;
+  background-color: #fb9a94;
+}
+
+.menu-bar:nth-child(2) {
+  margin: 4px 0;
+}
+
+@media (min-width: 576px) {
+  .auth a {
+    font-size: 1.125rem;
+  }
+
+  .menu-icon {
+    margin: 0.9rem 1.5rem;
+  }
+
+  .menu-bar {
+    width: 30px;
+    height: 4px;
+  }
+
+  .auth a:first-of-type {
+    padding-right: 0.7rem;
+  }
+
+  .auth a:last-of-type {
+    padding: 0 0.8rem;
+  }
+}
+
+/* main-nav */
+
+.main-nav {
+  position: relative;
+}
+
+.main-nav ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 0.9375rem 0;
+  white-space: nowrap;
+}
+
+.main-nav ul a {
+  font-weight: 700;
+  font-size: 1.3125rem;
+  color: #000;
+}
+
+.main-nav ul li {
+  flex-grow: 1;
+  line-height: 1.2;
+  border-left: 1px solid #d9d9d9;
+  list-style-type: none;
+}
+
+.main-nav ul li:first-of-type {
+  border: none;
+}
+
+.main-nav ul li:last-of-type {
+  flex-grow: 0;
+  margin-right: 5rem;
+  border: none;
+}
+
+#search-input {
+  width: 3.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  border: none;
+}
+
+.icon.i-search {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.main-nav::after {
+  position: absolute;
+  right: 0;
+  content: '';
+  border-top: 0.8rem solid rgb(247, 34, 16);
+  border-right: 65px solid rgb(247, 34, 16);
+  border-left: 0.8rem solid white;
 }
