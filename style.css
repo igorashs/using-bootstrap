@@ -13,6 +13,10 @@ body {
   max-width: 1310px;
 }
 
+a {
+  color: #000;
+}
+
 /* icons */
 
 .icon {
@@ -37,6 +41,10 @@ body {
 
 .i-right-arrow-r {
   background-image: url('images/icon-arrow-right-r.svg');
+}
+
+.i-right-arrow-b {
+  background-image: url('images/icon-arrow-right-b.svg');
 }
 
 /* 
@@ -217,4 +225,363 @@ main,
   border-top: 0.8rem solid rgb(247, 34, 16);
   border-right: 65px solid rgb(247, 34, 16);
   border-left: 0.8rem solid white;
+}
+
+/* main */
+
+h1 {
+  font-size: 1.375rem;
+  font-weight: 700;
+}
+
+.top-story-section p {
+  font-size: 0.8125rem;
+}
+
+section h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #999;
+}
+
+section h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+section p {
+  font-size: 0.9375rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+figure {
+  position: relative;
+}
+
+figure img {
+  width: 100%;
+}
+
+.category {
+  position: absolute;
+  padding: 0.2rem 1rem;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.category a {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: #f72210;
+}
+
+/* more-stories-section */
+
+.more-stories-section figure {
+  margin: 0;
+}
+
+.more-stories-section article {
+  padding-top: 0.7rem;
+  border-top: 1px solid #ddd;
+}
+
+.more-stories-section img {
+  width: auto;
+  margin-right: 1rem;
+  float: left;
+  padding-bottom: 1rem;
+}
+
+.more-stories-section h3 {
+  font-size: 1.0625rem;
+}
+
+.more-stories-section p {
+  font-size: 0.8125rem;
+}
+
+@media (min-width: 540px) {
+  .more-stories-section img {
+    float: none;
+  }
+
+  .more-stories-section article {
+    display: flex;
+  }
+}
+
+/* culture&travel-section */
+
+.culture-and-travel-section {
+  margin-bottom: 2.5rem;
+  background-color: #f4f5f7;
+}
+
+.culture-and-travel-section article {
+  margin-bottom: 1rem;
+}
+
+.culture-and-travel-section h2 {
+  padding: 0.625rem 0 0 0.625rem;
+}
+
+.culture-and-travel-section header {
+  padding: 0.625rem;
+}
+
+.culture-and-travel-section h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-family: Lora, serif;
+}
+
+.culture-and-travel-section p {
+  font-size: 0.9375rem;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: rgba(39, 39, 39, 0.7);
+}
+
+.mini-category a {
+  padding: 0.2rem 0.4rem;
+  font-size: 0.8125rem;
+  background: #c2d4d7;
+}
+
+/* featured-section */
+/* sponsored-section */
+
+.featured-section article {
+  margin-bottom: 1.25rem;
+}
+
+.sponsored-section article {
+  margin-bottom: 1.75rem;
+}
+
+.sponsored-section h3,
+.featured-section h3 {
+  font-size: 1.25rem;
+}
+
+.sponsored-section p,
+.featured-section p {
+  font-size: 0.8125rem;
+}
+
+.category.sponsored a {
+  color: #3581f4;
+}
+
+.sponsored-section figure {
+  margin: 0;
+}
+
+.sponsored-section p {
+  margin: 0;
+}
+
+.sponsored-section header {
+  padding: 1rem;
+  border: 1px solid #e6e6e6;
+}
+
+/* opinion-section */
+
+.opinion-section {
+  margin-bottom: 1.75rem;
+}
+
+.opinion-section article {
+  display: flex;
+}
+
+.opinion-section figure {
+  margin: 0 1rem 0.5rem 0;
+}
+
+.opinion-section img {
+  border-radius: 50%;
+}
+
+.opinion-section h3 {
+  font-size: 1.0625rem;
+}
+
+.opinion-section h4 {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #666;
+}
+
+.opinion-section figure img {
+  width: auto;
+}
+
+.opinion-section article {
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.latest-news-section article:last-of-type,
+.opinion-section article:last-of-type {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+/* latest-news-section */
+.sign-up,
+.latest-news-section {
+  margin-bottom: 1.75rem;
+}
+
+.latest-news-section article {
+  display: flex;
+  border-bottom: 1px solid #e6e6e6;
+  margin-bottom: 0.5rem;
+}
+
+.latest-news-section figure {
+  margin-bottom: 0.5rem;
+}
+
+.latest-news-section figure img {
+  width: 135px;
+}
+
+.latest-news-section h3 {
+  margin-left: 1rem;
+  font-size: 1.0625rem;
+}
+
+/* sign-up */
+
+.icon-wrapper {
+  margin-right: 0.5rem;
+  display: inline-block;
+  background-color: red;
+}
+
+.icon-wrapper .icon {
+  display: block;
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.sign-up {
+  max-width: 300px;
+  padding: 1.25rem 1rem;
+  margin: 0 auto 1.75rem auto;
+  border: 1px solid #e6e6e6;
+  background-color: #f4f5f6;
+}
+
+.sign-up h3 {
+  display: flex;
+  align-items: center;
+  font-size: 1.1875rem;
+  color: #333;
+}
+
+.sign-up-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.6rem;
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: #fff;
+  background-color: #666;
+}
+
+.sign-up a:last-of-type {
+  display: block;
+  margin: 0.5rem 0 0 0;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  color: #333;
+}
+
+.most-featured-section .i-right-arrow-b,
+.sign-up .i-right-arrow {
+  margin-left: 0.5rem;
+  width: 0.5rem;
+  height: 0.875rem;
+}
+
+/* magazine-section  */
+
+.magazine-section .category a {
+  font-size: 1rem;
+}
+
+.magazine-section .infocus-feature-section .category,
+.magazine-section .most-featured-section .category {
+  position: absolute;
+  padding: 0.2rem 1rem;
+}
+
+.magazine-section .infocus-feature-section .category {
+  background-color: #f72210;
+}
+
+.magazine-section .infocus-feature-section .category a {
+  color: #fff;
+}
+
+.magazine-section .category {
+  position: initial;
+  padding: 0;
+}
+
+.most-featured-section figure {
+  margin-bottom: 0;
+}
+
+.most-featured-section .see-all {
+  display: block;
+  padding: 0.4rem 0;
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-align: center;
+  background-color: #f4f5f6;
+}
+
+.magazine-section .featured-section h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.75rem 0 1rem 0;
+  font-size: 1.1875rem;
+  color: #333;
+}
+
+.magazine-section .infocus-feature-section h3,
+.magazine-section .featured-section h3 {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #000;
+}
+
+.magazine-section .featured-section figure {
+  margin-bottom: 0.75rem;
+}
+
+.magazine-section .infocus-feature-section figure {
+  margin-bottom: 0;
+}
+
+.magazine-section .featured-section .category * {
+  padding: 0.2rem 0.5rem;
+  font-size: 1rem;
+}
+
+.magazine-section .featured-section .category span:first-child {
+  color: #fff;
+  font-weight: 700;
+  background-color: #f72210;
+}
+
+.magazine-section .featured-section article {
+  margin-bottom: 1.75rem;
 }
