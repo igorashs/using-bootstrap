@@ -547,6 +547,7 @@ figure img {
   background-color: #f4f5f6;
 }
 
+.editors-pick-section h2,
 .magazine-section .featured-section h2 {
   display: flex;
   align-items: center;
@@ -584,4 +585,24 @@ figure img {
 
 .magazine-section .featured-section article {
   margin-bottom: 1.75rem;
+}
+
+/* editors-pick-section */
+
+.editors-pick-section h2 {
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.editors-pick-section header h3 {
+  font-size: 1.25rem;
+}
+
+.editors-pick-section header p {
+  font-size: 0.8125rem;
+  margin-bottom: 1.25rem;
+}
+
+.editors-pick-section figure {
+  margin-bottom: 0.5rem;
 }
