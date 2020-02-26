@@ -1,5 +1,10 @@
 /* global */
 
+@font-face {
+  font-family: 'Genericons';
+  src: url('fonts/Genericons.woff');
+}
+
 body {
   background-color: #f4f5f6;
   font-family: 'Roboto Condensed', sans-serif;
@@ -803,4 +808,83 @@ figure img {
   padding-bottom: 1.25rem;
   margin-bottom: 1.125rem;
   border-bottom: 1px solid #d9d9d9;
+}
+
+/* main-footer */
+
+.main-footer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.main-footer,
+.main-footer a {
+  color: #666;
+}
+
+.main-footer .logo {
+  width: 236px;
+  height: 36px;
+  fill: #f72210;
+}
+
+.main-footer li {
+  list-style: none;
+}
+
+.footer-social-links {
+  display: flex;
+  padding-bottom: 0.5rem;
+  font-family: 'Genericons';
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.footer-social-links a {
+  font-size: 1.625rem;
+  line-height: 1.5rem;
+}
+
+.footer-social-links li {
+  margin-right: 0.75rem;
+}
+
+.fi-facebook::before {
+  content: '\f203';
+}
+
+.fi-twitter {
+  font-size: 1.5625rem !important;
+}
+
+.fi-twitter::before {
+  content: '\f202';
+}
+
+.fi-instagram {
+  font-size: 1.4375rem !important;
+}
+
+.fi-instagram::before {
+  content: '\f215';
+}
+
+.fi-tumblr {
+  font-size: 1.25rem !important;
+}
+
+.fi-tumblr::before {
+  content: '\f214';
+}
+
+.fi-linkedin {
+  font-size: 1.5625rem !important;
+}
+
+.fi-linkedin::before {
+  content: '\f207';
+}
+
+.copyright {
+  margin: 0.5rem 0;
+  font-size: 0.75rem;
 }
