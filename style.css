@@ -127,7 +127,6 @@ main,
   margin-left: 1rem;
   width: 0.5rem;
   height: 0.875rem;
-  margin-left: 0.625rem;
 }
 
 .menu-icon {
@@ -144,7 +143,7 @@ main,
   margin: 4px 0;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 481px) {
   .auth a {
     font-size: 1.125rem;
   }
@@ -164,6 +163,10 @@ main,
 
   .auth a:last-of-type {
     padding: 0 0.8rem;
+  }
+
+  .auth .icon {
+    display: block !important;
   }
 }
 
@@ -286,10 +289,11 @@ figure img {
 }
 
 .more-stories-section img {
-  width: auto;
+  width: 135px;
+  height: 106px;
   margin-right: 1rem;
-  float: left;
   padding-bottom: 1rem;
+  float: left;
 }
 
 .more-stories-section h3 {
