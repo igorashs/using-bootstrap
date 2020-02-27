@@ -59,10 +59,6 @@ main,
   background-color: #fff;
 }
 
-main {
-  border-bottom: 1px solid #d9d9d9;
-}
-
 /* main-header */
 
 .main-header {
@@ -317,16 +313,11 @@ figure img {
 /* culture&travel-section */
 
 .culture-and-travel-section {
-  margin-bottom: 2.5rem;
-  background-color: #f4f5f7;
+  margin-bottom: 1.5rem;
 }
 
 .culture-and-travel-section article {
   margin-bottom: 1rem;
-}
-
-.culture-and-travel-section h2 {
-  padding: 0.625rem 0 0 0.625rem;
 }
 
 .culture-and-travel-section header {
@@ -551,11 +542,11 @@ figure img {
 
 .featured-slideshows-section h2,
 .editors-pick-section h2,
-.magazine-section .featured-section h2 {
+.magazine-section > h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 1.75rem 0 1rem 0;
+  margin: 1.25rem 0 1rem 0;
   font-size: 1.1875rem;
   color: #333;
 }
@@ -586,6 +577,7 @@ figure img {
   background-color: #f72210;
 }
 
+.infocus-feature-section article,
 .magazine-section .featured-section article {
   margin-bottom: 1.75rem;
 }
@@ -719,7 +711,6 @@ figure img {
 /* subscription-section */
 
 .subscription-section {
-  margin-top: 1rem;
   background-color: #f4f5f6;
 }
 
@@ -729,7 +720,6 @@ figure img {
 }
 
 .subscription-section h2 {
-  padding-top: 1rem;
   color: #f72210;
 }
 
@@ -742,10 +732,9 @@ figure img {
   background-color: #f4f5f6;
 }
 
+.subscription-section .sign-up-section,
 .subscription-section .subscribe-section {
   padding-bottom: 1.25rem;
-  margin-bottom: 1.125rem;
-  border-bottom: 1px solid #d9d9d9;
 }
 
 .group-images {
@@ -804,16 +793,9 @@ figure img {
   border: 1px solid #d9d9d9;
 }
 
-.subscription-section .sign-up-section {
-  padding-bottom: 1.25rem;
-  margin-bottom: 1.125rem;
-  border-bottom: 1px solid #d9d9d9;
-}
-
 /* main-footer */
 
 .main-footer {
-  padding-top: 2rem;
   padding-bottom: 2rem;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -928,4 +910,16 @@ figure img {
 .col {
   padding-right: 15px;
   padding-left: 15px;
+}
+
+/* grey separator bar */
+.bar::before {
+  content: '';
+  display: block;
+  margin-left: -15px;
+  width: calc(100% + 30px);
+  height: 1.125rem;
+  background: #f4f5f6;
+  border-top: 1px solid #d9d9d9;
+  margin-bottom: 1rem;
 }
