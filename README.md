@@ -7,3 +7,6 @@
 ## Assignment
 
 > Build a [newsweek](https://www.newsweek.com/) clone using bootstrap.
+
+## License
+This project is licensed under the MIT License
